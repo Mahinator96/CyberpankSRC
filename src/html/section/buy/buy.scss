@@ -1,0 +1,93 @@
+.buy {
+  background-color: $mainColor;
+  color: $white;
+  margin-bottom: 0;
+  // .buy__wrapper
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    @media (max-width: 720px) {
+      grid-template-columns: auto;
+      // grid-template-rows: toRem(200) 1fr;
+    }
+  }
+  // .buy__img
+  &__img {
+    color: $yellow;
+
+    @media (max-width: 720px) {
+      height: 61.875vw;
+    }
+    // .buy__img picture
+    picture {
+      height: 100%;
+    }
+  }
+  // .buy__about 
+  &__about {
+    padding: toRem(70) toRem(20) toRem(70) toRem(35);
+
+    @media (max-width: 720px) {
+      padding: toRem(40) toRem(12);
+    }
+  }
+  // .buy__title
+  &__title {
+  }
+  // .buy__complect
+  &__complect {
+    margin-bottom: toRem(70);
+
+    @media (max-width: 720px) {
+      margin-bottom: toRem(40);
+    }
+    // .buy__complect-title
+    &-title {
+      margin-bottom: toRem(15);
+    }
+    // .buy__complect-items
+    &-items {
+      margin-bottom: 0;
+    }
+  }
+  // .buy__list-title
+  &__list-title {
+    font-size: toRem(24);
+    font-weight: 700;
+    color: $blue;
+  }
+  // .buy__items
+  &__items {
+  }
+  // .buy__item
+  &__item {
+  }
+  // .buy__item-img
+  &__item-img {
+  }
+  // .buy__item-text
+  &__item-text {
+  }
+  // .buy__platforms
+  &__platform {
+
+    &-title {
+      margin-bottom: toRem(25);
+    }
+  }
+  // .buy__platforms-items
+  &__platform-items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: toRem(320);
+    gap: toRem(45) toRem(25);
+  }
+  // .buy__platforms-item
+  &__platform-item {
+    align-self: center;
+  }
+  // .buy__platform-img
+  &__platform-img {
+  }
+}

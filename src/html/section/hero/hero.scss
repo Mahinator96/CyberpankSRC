@@ -1,0 +1,44 @@
+.hero {
+  height: 100vh;
+  position: relative;
+  min-height: toRem(495);
+  margin-bottom: toRem(70);
+  // .hero__container
+  &__container {
+    display: grid;
+    height: 100%;
+    justify-content: end;
+    align-items: end;
+  }
+  // .hero__slider
+  &__slider {
+    position: absolute;
+    inset: 0;
+  }
+  // .hero__slider-list
+  &__slider-list {
+    position: absolute;
+    inset: 0;
+    // z-index: -1;
+    // height: 100vh !important;
+  }
+  // .hero__slider-item
+  &__slider-item {
+  
+    & picture {
+      height: 100vh !important;
+    }
+  }
+  &__info {
+    // position: absolute;
+    // position: relative;
+    z-index: 2;
+    clip-path: polygon(10% 0, 100% 0, 100% 85%, 90% 100%, 0 100%, 0 15%);
+
+    @media (max-width: 720px) {
+      position: absolute;
+      bottom: 0;
+      clip-path: none;
+    }
+  }
+}

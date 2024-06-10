@@ -1,0 +1,55 @@
+<section class="win">
+  <div class="container win__container">
+    <div class="win__about">
+      <h2 class="section__title win__title">
+        <img src="@img/win/sale.svg" width="132" height="132" alt="Акция">
+        Играй и выигрывай!</h2>
+      <p class="win__text">
+        Играй в <span>Cyberpunk 2077</span> и получи возможность выиграть консоль <span>Xbox Series X</span> или <span>Sony PlayStation 5!</span> Заполни форму ниже и приложи скриншот о покупке игры. Итоги розыгрыша будут подведены 1 февраля. Удачи! ;)
+      </p>
+    </div>
+
+    <div class="win__wrapper">
+      <form class="win__form form-win form">
+        <div class="form__input-wrapper">
+          <input class="form__input form-win__input" type="text" placeholder="Как тебя зовут?" id="name" required>
+          <label class="error-container error-container--name" for="name"></label>
+        </div>
+
+        <div class="form__input-wrapper">
+          <input class="form__input form-win__input" type="email" placeholder="Твой e-mail" id="email" required>
+          <label class="error-container error-container--email" for="name"></label>
+        </div>
+
+        <div class="form__file">
+          <div class="form__file-preview">
+            <img src="" alt="Превью отправляемого фото">
+          </div>
+          <label class="form__label-file form-win__label-file" for="file">
+            <p>Прикрепить скриншот</p>
+            <span>.png / .jpg / .pdf</span>
+            <input class="form__file-input form-win__file-input" type="file" id="file" name="file" accept="image/png, image/jpeg, image/pdf" required>
+          </label>
+          <div class="error-container error-container--file"></div>
+        </div>
+
+        <div class="form__submit">
+          
+          <div class="form__input-wrapper">
+            <input class="form__check form-win__check" type="checkbox" checked id="data" name="data">
+            <label class="form__label-check form-win__label-check" for="data" id="check">
+              Согласен на обработку персональных данных
+            </label>
+            <div class="error-container error-container--check"></div>
+          </div>
+          <button class="button form-win__submit button--yellow" type="submit">Отправить</button>
+        </div>
+      </form>
+
+      <div class="win__imgs" data-da=".win__container, 0, 1024, .win__title, 0, 720">
+        <img class="win__img win__img--xbox" src="@img/win/xbox.png" width="460" height="456" alt="Игровая приставка Xbox Series X" title="Игровая приставка Xbox Series X">
+        <img class="win__img win__img--ps" src="@img/win/ps4.png" width="460" height="456" alt="Игровая приставка Sony PlayStation 5" title="Игровая приставка Sony PlayStation 5">
+      </div>
+    </div>
+  </div>
+</section>

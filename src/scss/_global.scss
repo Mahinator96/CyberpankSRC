@@ -1,0 +1,158 @@
+html {
+	height: 100%;
+  box-sizing: border-box;
+}
+* {
+  box-sizing: inherit;
+	scroll-behavior: smooth;
+}
+body{
+	color: $mainColor;
+  @include adaptiv-mp(18, 16, font-size, 1024);
+	font-family: $fontFamily;
+  position: relative;
+  min-width: $minWidth + px;
+  overflow-x: hidden;
+  margin: 0;
+
+  &._lock {
+    overflow: hidden;
+
+		.body-wrapper {
+			overflow: hidden;
+		}
+  }
+}
+.body-wrapper {
+  position: relative;
+  width: 100vw;
+  height: 100%;
+  overflow-x: hidden;
+}
+main {
+	flex-grow: 1;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+}
+h1, h2, h3, h4, h5, h6, p, ul {
+  margin: 0;
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+ol {
+	padding: 0;
+  margin: 0;
+}
+
+.list-counter {
+	list-style-type: none;
+	counter-reset: item;
+	
+	li {
+		position: relative;
+
+		&::before {
+			position: absolute;
+			top: 0;
+			left: 0;
+			counter-increment: item;
+			content: counter(item);
+		}
+	}
+}
+img {
+  object-fit: cover;
+}
+button, input, textarea, fieldset {
+  color: inherit;
+  font-size: inherit;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+button, input, textarea, select {
+	cursor: pointer;
+}
+input, textarea, fieldset, select {
+	&:focus-visible {
+		outline: none;
+	}
+}
+picture {
+	display: flex;
+	source {
+		width: 0;
+		height: 0;
+	}
+	img {
+		width: 100%;
+		height: 100%;
+	}
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+.container {
+	--width: 1280px;
+  --padding: 30px;
+  max-width: calc(var(--width) + var(--padding) * 2);
+  margin: 0 auto;
+  padding: 0 var(--padding);
+
+  @media (max-width: 720px) {
+    --padding: 12px;
+  }
+}
+section {
+  margin-bottom: toRem(70);
+}
+.section__title {
+  // font-family: Archangelsk, sans-serif;
+  font-family: Cormorant, sans-serif;
+  @include adaptiv-mp(62, 30, font-size, 1024);
+  font-weight: 400;
+  margin-bottom: 25px;
+}
+.button {
+  padding: toRem(19) toRem(50);
+  font-weight: 700;
+  transition: .3s ease;
+
+  &--yellow {
+    color: $mainColor;
+    background-color: $yellow;
+
+    &:hover {
+      background-color: $yellowHover;
+      
+    }
+  }
+
+  &--black {
+    color: $yellow;
+    background-color: $mainColor;
+  }
+}
+.license {
+  @include adaptiv-mp(18, 14, "font-size");
+}
